@@ -1,0 +1,32 @@
+== {{int:filedesc}} ==
+
+{{Information
+ | Description = {{mld
+    | fr = $Iptc.CaptionAbstract
+   }}
+ | Source = {{own}}
+ | Date = $ExifSubIFD.DateTimeOriginal
+ | Author = $user.displayName ([[User:$user.login]])
+
+}}
+#if ($GPS.GPSVersionID == "2.200")
+#parse ("gps.vm")
+#end
+#foreach ($keyword in $keywords)
+#if ($keyword.matches("[PI]A[0-9]{8}"))
+{{Mérimée|$keyword}}
+#end
+#end
+
+== {{int:license}} ==
+
+{{cc-by-sa-3.0}}
+
+#foreach ($keyword in $keywords)
+#if ($keyword.startsWith("Category:"))
+[[$keyword]]
+#end
+#end
+#parse ("wmfr.vm")
+#parse ("user.vm")
+[[Category:Files by $user.login]]

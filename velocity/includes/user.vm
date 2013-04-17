@@ -1,0 +1,6 @@
+#if ($ExifSubIFD.LensModel == "20mm")
+[[Category:Photographs taken with Voigtländer 20 mm F3.5 Color Skopar SL II]]
+#end
+#if ($ExifIFD0.Model == "Canon EOS 60D")
+[[Category:Taken with Canon EOS 60D]]
+#end
