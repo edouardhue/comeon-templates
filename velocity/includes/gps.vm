@@ -1,9 +1,1 @@
-#set ($latitude = $GPS.GPSLatitude.split(" "))
-#set ($latDegrees = $latitude[0].replace("°", ""))
-#set ($latMinutes = $latitude[1].replace("'", ""))
-#set ($latSeconds = $latitude[2].replace('"', ""))
-#set ($longitude = $GPS.GPSLongitude.split(" "))
-#set ($lonDegrees = $longitude[0].replace("°", ""))
-#set ($lonMinutes = $longitude[1].replace("'", ""))
-#set ($lonSeconds = $longitude[2].replace('"', ""))
-{{Location|$latDegrees|$latMinutes|$latSeconds|$GPS.GPSLatitudeRef|$lonDegrees|$lonMinutes|$lonSeconds|$GPS.GPSLongitudeRef}}
+{{Location dec|$geolocation.latitude|$geolocation.longitude}}

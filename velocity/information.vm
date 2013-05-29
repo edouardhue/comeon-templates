@@ -5,7 +5,7 @@
     | fr = $Iptc.CaptionAbstract
    }}
  | Source = {{own}}
- | Date = $ExifSubIFD.DateTimeOriginal
+ | Date = $date
  | Author = $user.displayName ([[User:$user.login]])
 
 }}
