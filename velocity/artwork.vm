@@ -1,0 +1,40 @@
+== {{int:filedesc}} ==
+
+{{Artwork
+ | Artist =
+#foreach ($keyword in $keywords)
+#if ($keyword.startsWith("Creator:"))
+[[$keyword]]
+#end
+#end
+ | Title = 
+ | Description = {{mld
+    | fr = $Iptc.CaptionAbstract
+   }}
+ | Date =
+ | Medium = 
+ | Dimensions = 
+ | Institution = 
+ | Location = 
+ | Inscriptions = 
+ | Permission = {{PD-old-auto-1923|deathyear=}}
+{{CC-zero}}
+ | Source = $user.displayName ([[User:$user.login]])
+}}
+#if ($GPS.GPSVersionID == "2.200")
+#parse ("gps.vm")
+#end
+#foreach ($keyword in $keywords)
+#if ($keyword.matches("[PI]A[0-9]{8}"))
+{{Mérimée|$keyword}}
+#end
+#end
+
+#foreach ($keyword in $keywords)
+#if ($keyword.startsWith("Category:"))
+[[$keyword]]
+#end
+#end
+#parse ("wmfr.vm")
+#parse ("user.vm")
+[[Category:Files by $user.login]]
