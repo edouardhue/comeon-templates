@@ -1,9 +1,15 @@
-#if ($ExifSubIFD.LensSerialNumber == "000000774f" || $ExifSubIFD.LensSerialNumber == "0000428c7c")
+#if ($ExifSubIFD.LensSerialNumber == "000000774f" || $ExifSubIFD.LensSerialNumber == "0000428c7c" || $ExifSubIFD.BodySerialNumber == "073024007140")
 {{Wikimedia France - Fañch}}
+#end
+#if ($ExifIFD0.Model == "Canon EOS 5D Mark III")
+[[Category:Taken with Canon EOS 5D Mark III]]
 #end
 #if ($ExifSubIFD.LensModel == "TS-E17mm f/4L")
 [[Category:Taken with Canon TS-E 17 mm F4L]]
 #end
 #if ($ExifSubIFD.LensModel == "EF70-200mm f/2.8L IS II USM")
 [[Category:Taken with Canon EF 70-200mm F2.8L IS II USM]]
+#end
+#if ($ExifSubIFD.LensModel == "EF50mm f/1.4 USM")
+[[Category:Taken with Canon EF 50mm F1.4 USM]]
 #end

@@ -7,7 +7,7 @@
  | Source = {{own}}
  | Date = $date
  | Author = $user.displayName ([[User:$user.login]])
-
+ | Permission = {{cc-by-sa-3.0}}
 }}
 #if ($GPS.GPSVersionID == "2.200")
 #parse ("gps.vm")
@@ -17,10 +17,6 @@
 {{Mérimée|$keyword}}
 #end
 #end
-
-== {{int:license}} ==
-
-{{cc-by-sa-3.0}}
 
 #foreach ($keyword in $keywords)
 #if ($keyword.startsWith("Category:"))
