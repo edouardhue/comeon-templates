@@ -1,0 +1,8 @@
+#foreach ($keyword in $keywords)
+#if ($keyword.matches("[PI]A[0-9]{8}"))
+{{Mérimée|$keyword}}
+#end
+#if ($keyword.matches("[PI]M[0-9]{8}"))
+{{Palissy|$keyword}}
+#end
+#end

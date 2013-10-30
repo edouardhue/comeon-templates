@@ -12,11 +12,7 @@
 #if ($GPS.GPSVersionID == "2.200")
 #parse ("gps.vm")
 #end
-#foreach ($keyword in $keywords)
-#if ($keyword.matches("[PI]A[0-9]{8}"))
-{{Mérimée|$keyword}}
-#end
-#end
+#parse ("minicul.vm")
 
 #foreach ($keyword in $keywords)
 #if ($keyword.startsWith("Category:"))
