@@ -22,15 +22,15 @@
  | Source = $user.displayName ([[User:$user.login]])
 }}
 #if ($GPS.GPSVersionID == "2.200")
-#parse ("gps.vm")
+#parse ("includes/gps.vm")
 #end
-#parse ("minicul.vm")
+#parse ("includes/minicul.vm")
 
 #foreach ($keyword in $keywords)
 #if ($keyword.startsWith("Category:"))
 [[$keyword]]
 #end
 #end
-#parse ("wmfr.vm")
-#parse ("user.vm")
+#parse ("includes/wmfr.vm")
+#parse ("includes/user.vm")
 [[Category:Files by $user.login]]
