@@ -7,7 +7,7 @@
  | Source = {{own}}
  | Date = $date
  | Author = $user.displayName ([[User:$user.login]])
- | Permission = {{cc-by-sa-3.0}}
+ | Permission = {{cc-by-sa-4.0|$user.displayName}}
 }}
 #if ($GPS.GPSVersionID == "2.200")
 #parse ("includes/gps.vm")
