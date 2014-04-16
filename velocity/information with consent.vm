@@ -1,0 +1,25 @@
+== {{int:filedesc}} ==
+
+{{Information
+ | Description = {{mld
+    | fr = $Iptc.CaptionAbstract
+   }}
+ | Source = {{own}}
+ | Date = $date
+ | Author = $user.displayName ([[User:$user.login]])
+ | Permission = {{cc-by-sa-3.0}}
+}}
+#if ($GPS.GPSVersionID == "2.200")
+#parse ("includes/gps.vm")
+#end
+{{Consent|full}}
+{{Personality rights}}
+#parse ("includes/minicul.vm")
+#parse ("includes/wmfr.vm")
+#foreach ($keyword in $keywords)
+#if ($keyword.startsWith("Category:"))
+[[$keyword]]
+#end
+#end
+#parse ("includes/user.vm")
+[[Category:Files by $user.login]]
