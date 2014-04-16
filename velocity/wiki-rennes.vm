@@ -1,0 +1,17 @@
+{| class="wikitable" width="100%"
+ |+ Informations
+ |-
+ ! scope="row" width="20%" align="right" | Description
+ | $Iptc.CaptionAbstract
+ |-
+ ! scope="row" | Date
+ | $date
+ |-
+ ! scope="row" | Auteur
+ | $user.displayName ([[User:$user.login]])
+ |-
+ ! scope="row" | Licence
+ | [https://creativecommons.org/licenses/by-sa/4.0/deed.fr Creative Commons Attribution - Partage dans les Mêmes Conditions 4.0 International (CC BY-SA 4.0)]
+ |}
+
+[[Category:Files by $user.login]]
