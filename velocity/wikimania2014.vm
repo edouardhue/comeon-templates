@@ -1,0 +1,26 @@
+== {{int:filedesc}} ==
+
+{{Information
+ | Description = {{mld
+    | fr = $Iptc.CaptionAbstract
+   }}
+ | Source = {{own}}
+ | Date = $date
+ | Author = $user.displayName ([[User:$user.login]])
+ | Permission = {{cc-by-sa-4.0}}
+}}
+#if ($GPS.GPSVersionID == "2.200")
+#parse ("includes/gps.vm")
+#end
+{{Wikimedia France - Wikimania 2014}}
+{{Consent|public}}
+{{Personality rights}}
+#parse ("includes/minicul.vm")
+#parse ("includes/wmfr.vm")
+#foreach ($keyword in $keywords)
+#if ($keyword.startsWith("Category:"))
+[[$keyword]]
+#end
+#end
+#parse ("includes/user.vm")
+[[Category:Wikimania 2014 photos by $user.login]]
