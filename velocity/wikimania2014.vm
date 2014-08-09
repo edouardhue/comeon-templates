@@ -2,7 +2,7 @@
 
 {{Information
  | Description = {{mld
-    | fr = $Iptc.CaptionAbstract
+    | en = $Iptc.CaptionAbstract
    }}
  | Source = {{own}}
  | Date = $date
