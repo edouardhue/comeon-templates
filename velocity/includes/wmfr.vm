@@ -1,7 +1,7 @@
 #if ($ExifSubIFD.LensSerialNumber == "000000774f" || $ExifSubIFD.LensSerialNumber == "0000428c7c" || $ExifSubIFD.BodySerialNumber == "073024007140")
 {{Wikimedia France - Fañch}}
 #end
-#if ($ExifSubIFD.LensSerialNumber == "0300010987" || $ExifSubIFD.LensSerialNumber == "0000449557" || $ExifSubIFD.BodySerialNumber == "073025001999")
+#if ($ExifSubIFD.LensSerialNumber == "0300010987" || $ExifSubIFD.LensSerialNumber == "0000449557" || $ExifSubIFD.LensSerialNumber == "0000071397" || $ExifSubIFD.BodySerialNumber == "073025001999")
 {{Wikimedia France - Sterenn}}
 #end
 #if ($ExifIFD0.Model == "Canon EOS 5D Mark III")
@@ -21,4 +21,7 @@
 #end
 #if ($ExifSubIFD.LensModel == "EF24-70mm f/4L IS USM")
 [[Category:Taken with Canon EF 24-70mm F4L IS USM]]
+#end
+#if ($ExifSubIFD.LensModel == "EF100mm f/2.8L Macro IS USM")
+[[Category:Taken with Canon EF 100mm F2.8L Macro IS USM]]
 #end
