@@ -1,0 +1,30 @@
+== {{int:filedesc}} ==
+
+{{Specimen
+ | Description = {{mld
+  | fr = 
+ }} 
+ | taxon = $Iptc.ObjectName
+ | authority = 
+ | institution = Université de Rennes 1
+ | accession number = $Iptc.CaptionAbstract
+ | period = {{Date|$external.date}}
+ | author = $user.displayName ([[User:$user.login]])
+ | source = {{own}}
+ | Date = $date
+ | permission = {{self|cc-by-sa-4.0|attribution=$user.displayName}}
+}}
+{{Wikimédia France - Université de Rennes 1|year=2014|quarter=2}}
+#if ($GPS.GPSVersionID == "2.200")
+#parse ("includes/gps.vm")
+#end
+
+#foreach ($keyword in $keywords)
+#if ($keyword.startsWith("Category:"))
+[[$keyword]]
+#end
+#end
+#parse ("includes/wmfr.vm")
+#parse ("includes/user.vm")
+[[Category:Files by $user.login]]
+[[Category:Taxidermied $Iptc.ObjectName in the collections of zoology of Université de Rennes 1]]
