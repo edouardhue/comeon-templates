@@ -2,19 +2,19 @@
 
 {{Specimen
  | Description = {{mld
-  | fr = 
+  | fr = [[:fr:$external.vernaculaire]], $external.type, $external.caracs.
  }} 
- | taxon = $Iptc.ObjectName
- | authority = 
+ | taxon = $external.binominal
+ | authority = $external.autorite
  | institution = Université de Rennes 1
  | accession number = $Iptc.CaptionAbstract
  | period = {{Date|$external.date}}
- | author = $user.displayName ([[User:$user.login]])
+ | author = [[User:$user.login|$user.displayName]] & [[User:Pymouss|Pymouss]]
  | source = {{own}}
  | Date = $date
  | permission = {{self|cc-by-sa-4.0|attribution=$user.displayName}}
 }}
-{{Wikimédia France - Université de Rennes 1|year=2014|quarter=2}}
+{{Wikimedia France - Université de Rennes 1|year=2015|quarter=1}}
 #if ($GPS.GPSVersionID == "2.200")
 #parse ("includes/gps.vm")
 #end
@@ -27,4 +27,5 @@
 #parse ("includes/wmfr.vm")
 #parse ("includes/user.vm")
 [[Category:Files by $user.login]]
-[[Category:Taxidermied $Iptc.ObjectName in the collections of zoology of Université de Rennes 1]]
+[[Category:Files by Pymouss]]
+[[Category:Taxidermied $external.binominal in the collections of zoology of Université de Rennes 1]]
