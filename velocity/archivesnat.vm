@@ -32,7 +32,6 @@
 #if ( $external.num_versement )
 [[Category:Media contributed by the Archives Nationales (France)/$external.num_versement]]
 #end
-#
 
 #*
 Colonnes attendues dans le fichier CSV :
