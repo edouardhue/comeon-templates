@@ -4,6 +4,12 @@
 #if ($ExifSubIFD.LensModel == "EF200mm f/2.8L USM")
 [[Category:Taken with Canon EF 200mm F2.8L II USM]]
 #end
+#if ($ExifSubIFD.LensModel == "18.0-55.0 mm")
+[[Category:Taken with Canon EF-S 18-55mm F3.5-5.6]]
+#end
 #if ($ExifIFD0.Model == "Canon EOS 60D")
 [[Category:Taken with Canon EOS 60D]]
+#end
+#if ($ExifIFD0.Model == "Canon EOS 350D DIGITAL")
+[[Category:Taken with Canon EOS 350D]]
 #end
