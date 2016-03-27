@@ -1,0 +1,45 @@
+== {{int:filedesc}} ==
+
+{{Artwork
+ | Artist =
+ | Title = {{Title|$external.titre|lang=fr}}
+ | Description = {{mld
+    | fr = $external.analyse
+   }}
+#if ( $external.date)
+ | Date = $external.date
+#else
+ | Date = {{Other date|unknown}}
+#end
+ | Dimensions = $external.taille
+ | Medium = {{Technique|paper}}
+ | Institution = {{Institution:Archives nationales (France)}}
+ | Accession number = $external.cote #if ( $external.cote_origine ) ({{{Original accession number|$external.cote_origine}}}) #end
+ | References =
+#if ( $external.source ) * [$external.source Document sur le site des archives] #end
+#if ( $external.archim) * {{Base Archim|$external.archim}} #end
+ | Source = {{Archives Nationales cooperation project}}
+ | Permission = {{PD-old-100-1923}}
+}}
+
+#if ( $external.year )
+[[Category:$external.year in France]]
+#end
+#if ( $external.batch )
+[[Category:Media contributed by the Archives Nationales (France)/$external.batch]]
+#end
+#
+
+#*
+Colonnes attendues dans le fichier CSV :
+titre : Titre du document. Obligatoire.
+analyse : Description du document. Obligatoire.
+date : Date du document, au format AAAA, AAAA-MM ou AAAA-MM-JJ. Facultatif.
+taile : Dimensions du document. Obligatoire. Voir si on peut décomposer en largeur / hauteur...
+cote : Côte courante du document. Obligatoire.
+cote_origine : Côte originale du document. Facultatif.
+source : URL du document sur le site des Archives. Facultatif.
+archim : Code Archim du document. Facultatif.
+year : Année du document. Facultatif.
+batch : Numéro du versement. Facultatif.
+*#
