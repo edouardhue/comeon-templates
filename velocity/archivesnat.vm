@@ -11,7 +11,11 @@
 #else
  | Date = {{Other date|unknown}}
 #end
+#if ( $external.taille )
  | Dimensions = $external.taille
+# elseif ( $external.hauteur && $external.largeur )
+ | Dimensions = {{Size|unit=cm|height=$external.hauteur|width=$external.largeur}}
+#end
  | Medium = {{Technique|paper}}
  | Institution = {{Institution:Archives nationales (France)}}
  | Accession number = $external.cote #if ( $external.cote_origine ) ({{{Original accession number|$external.cote_origine}}}) #end
@@ -22,11 +26,11 @@
  | Permission = {{PD-old-100-1923}}
 }}
 
-#if ( $external.year )
-[[Category:$external.year in France]]
+#if ( $external.annee )
+[[Category:$external.annee in France]]
 #end
-#if ( $external.batch )
-[[Category:Media contributed by the Archives Nationales (France)/$external.batch]]
+#if ( $external.num_versement )
+[[Category:Media contributed by the Archives Nationales (France)/$external.num_versement]]
 #end
 #
 
@@ -34,12 +38,14 @@
 Colonnes attendues dans le fichier CSV :
 titre : Titre du document. Obligatoire.
 analyse : Description du document. Obligatoire.
-date : Date du document, au format AAAA, AAAA-MM ou AAAA-MM-JJ. Facultatif.
-taile : Dimensions du document. Obligatoire. Voir si on peut décomposer en largeur / hauteur...
+date : Date du document, au format AAAA, AAAA-MM ou AAAA-MM-JJ. Pour les cas complexes, utiliser directement {{other date}}. Facultatif.
+taile : Dimensions du document. Facultatif. Ne pas indiquer si largeur et hauteur sont précisés.
+largeur : Largeur du document en cm. Facultatif. Utilisé seulement si hauteur est indiqué aussi.
+hauteur : Hauteur du document en cm. Facultatif. Utilisé seulement si largeur est indiqué aussi.
 cote : Côte courante du document. Obligatoire.
 cote_origine : Côte originale du document. Facultatif.
 source : URL du document sur le site des Archives. Facultatif.
 archim : Code Archim du document. Facultatif.
-year : Année du document. Facultatif.
-batch : Numéro du versement. Facultatif.
+annee : Année du document. Facultatif.
+num_versement : Numéro du versement. Facultatif.
 *#
