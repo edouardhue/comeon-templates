@@ -18,7 +18,7 @@
 #end
  | Medium = {{Technique|paper}}
  | Institution = {{Institution:Archives nationales (France)}}
- | Accession number = $external.cote #if ( $external.cote_origine ) ({{{Original accession number|$external.cote_origine}}}) #end
+ | Accession number = $external.cote #if ( $external.cote_origine ) ({{Original accession number|$external.cote_origine}}) #end
  | References =
 #if ( $external.source ) * [$external.source Document sur le site des archives] #end
 #if ( $external.archim) * {{Base Archim|$external.archim}} #end
