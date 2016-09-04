@@ -1,0 +1,25 @@
+== {{int:filedesc}} ==
+
+{{Information
+ | Description = {{mld
+    | fr = $Tags.title
+   }}
+ | Date = $Tags.year
+ | Author = $Tags.artist
+}}
+#if ($GPS.GPSVersionID == "2.200")
+#parse ("includes/gps.vm")
+#end
+#parse ("includes/minicul.vm")
+
+#foreach ($keyword in $keywords)
+#if ($keyword.startsWith("Category:"))
+[[$keyword]]
+#end
+#if ($keyword.startsWith("{{") && $keyword.endsWith("}}"))
+$keyword
+#end
+#end
+#parse ("includes/wmfr.vm")
+#parse ("includes/user.vm")
+[[Category:Files by $user.login]]

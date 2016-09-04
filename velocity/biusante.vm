@@ -1,0 +1,84 @@
+#set( $techniques = {
+    "Dessin" : "{{Technique|drawing}}",
+    "Gravure" : "{{Technique|engraving}}",
+    "Gravure - Bois" : "{{Technique|woodcut}} / {{Technique|wood engraving}}",
+    "Gravure - Burin" : "{{Technique|burin}}",
+    "Gravure - Eau forte" : "{{Technique|etching}}",
+    "Gravure - Manière noire" : "{{Technique|mezzotint}}",
+    "Gravure - Pointe sèche" : "{{Technique|drypoint}}",
+    "Gravure - Pointillé" : "{{Technique|stipple engraving}}",
+    "Impr. photomécanique - Phototypie" : "{{Technique|collotype}}",
+    "Lithographie" : "{{Technique|lithography}}",
+    "Peinture" : "{{Technique|painting}}",
+    "Peinture - Aquarelle" : "{{Technique|watercolor}}",
+    "Photography" : "{{Technique|photo}}",
+    "Sculpture" : "{{Technique|sculpture}}"
+})
+#set( $categories = {
+    "Dessin" : "[[Category:Drawings]]",
+    "Gravure" : "[[Category:Engravings]]",
+    "Gravure - Bois" : "[[Category:Woodcuts]] [[Category:Wood engravings]]",
+    "Gravure - Burin" : "[[Category:Intaglio prints]]",
+    "Gravure - Eau forte" : "[[Category:Etchings]]",
+    "Gravure - Manière noire" : "[[Category:Mezzotints]]",
+    "Gravure - Pointe sèche" : "[[Category:Drypoint prints]]",
+    "Gravure - Pointillé" : "[[Category:Stipple engravings]]",
+    "Gravure - Trait (trait anglais ?)" : "[[Category:Scratchboards]]",
+    "Impr. photomécanique - Héliogravure" : "[[Category:Photogravure]]",
+    "Impr. photomécanique - Photogravure" : "[[Category:Photogravure]]",
+    "Impr. photomécanique - Phototypie" : "[[Category:Collotypes]]",
+    "Lithographie" : "[[Category:Lithographs]]",
+    "Peinture" : "[[Category:Paintings]]",
+    "Peinture - Aquarelle" : "[[Category:Watercolor paintings]]",
+    "Photography" : "[[Category:Photographs]]",
+    "Sculpture" : "[[Category:Sculptures]]"
+})
+#set( $typedocs = {
+    "cartepostale" : "Postcards",
+    "estampe" : "Relief printing",
+    "livre" : "Books",
+    "objet" : "Objects",
+    "photographie" : "Photographs",
+    "sculpture" : "Sculptures"
+})
+== {{int:filedesc}} ==
+
+{{Artwork
+| Artist = $external.autima
+| Title = {{fr|$external.titima}}
+| Description = {{mld
+    | fr = $external.tous_titres2
+}}
+| Notes =
+#if (!$external.comment.isEmpty())
+    {{fr|$external.comment}}
+#end
+| Date =
+#if ($external.annee_iso.matches("\d{4}"))
+    $external.annee_iso
+#elseif ($external.annee_iso.matches("\d{2}"))
+    {{other_date|century|$external.annee_iso}}
+#else
+    {{other_date|unknown}}
+#end
+| Medium =
+#if ($techniques.containsKey(${external.technique}))
+    $techniques.get(${external.technique})
+#else
+    $external.technique
+#end
+| Accession number = $external.cote
+| Institution = {{Institution:Bibliothèque interuniversitaire de santé}}
+| Object history = {{Old fund}}
+| Permission = {{Licence ouverte}}
+| Source = {{Wikimedia France - BIU Santé}}
+}}
+
+#if ($typedocs.containsKey($external.typedoc))
+[[Category:$typedocs.get($external.typedoc) from collections of Bibliothèque interuniversitaire de santé]]
+#end
+#if ($categories.containsKey(${external.technique}))
+$categories.get(${external.technique})
+#end
+
+
