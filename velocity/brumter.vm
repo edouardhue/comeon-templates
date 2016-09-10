@@ -1,0 +1,14 @@
+== {{int:filedesc}} ==
+
+{{Photograph
+ | original description = 
+ | description = $external.description
+ | technique = {{Technique|photograph}}
+ | source = {{Wikimedia France - Fonds Brumter|year=$external.fdcYear|quarter=$external.fdcQuarter}}
+ | accession number = $external.lot
+ | institution = {{Private collection|owner=Brumter}}
+ | date = {{Date|$external.annee}}
+ | photographer = {{Creator:Robert Brumter}}
+ | permission = {{cc-by-sa-4.0|Robert Brumter}}
+}}
+[[Category:Fonds Brumter - lot $external.lot]]
