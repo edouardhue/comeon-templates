@@ -1,0 +1,30 @@
+== {{int:filedesc}} ==
+
+{{Specimen
+ | taxon = $external.genus $external.specificEpithet
+ | authority = $external.scientificNameAuthorship
+ | discovery place =
+#if (!$external.verbatimLocality.isEmpty()) $external.verbatimLocality<br>
+#end
+#if (!$external.county.isEmpty()) $external.county<br>
+#end
+#if (!$external.stateProvince.isEmpty()) $external.stateProvince<br>
+#end
+#if (!$external.country.isEmpty()) $external.country
+#end
+ | gender = $external.sex
+ | period = {{ISODate|$external.eventDate}}
+ | discovery place =
+ | institution = {{Institution:Muséum national d'histoire naturelle}}
+ | accession number = [$external.id $external.catalogNumber]
+ | source =
+Muséum national d’Histoire naturelle, Paris (France)<br>
+Collection : Plantes vasculaires (P)<br>
+Spécimen $external.catalogNumber
+ | photographer = #if ($external.creator.isEmpty()) {{anonymous}}
+#else $external.creator
+#end
+ | Date = $external.modified
+ | permission = {{cc-by-4.0|Muséum national d’Histoire naturelle, Paris (France)}}
+}}
+[[Category:$external.genus $external.specificEpithet]]
