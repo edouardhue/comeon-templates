@@ -7,7 +7,7 @@
  | taxon = $external.binominal
  | authority = $external.autorite
  | institution = Université de Rennes 1
- | accession number = $Iptc.CaptionAbstract
+ | accession number = $IPTC.CaptionAbstract
  | period = {{Date|$external.date}}
  | author = [[User:$user.login|$user.displayName]] & [[User:Pymouss|Pymouss]]
  | source = {{own}}

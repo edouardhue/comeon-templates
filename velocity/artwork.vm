@@ -9,7 +9,7 @@
 #end
  | Title = 
  | Description = {{mld
-    | fr = $Iptc.CaptionAbstract
+    | fr = $IPTC.CaptionAbstract
    }}
  | Date =
  | Medium = 

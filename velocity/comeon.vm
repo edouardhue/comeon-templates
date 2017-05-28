@@ -2,25 +2,27 @@
 
 {{Information
  | Description = {{mld
-    | en = $Iptc.CaptionAbstract
+    | fr = Capture d’écran de ComeOn!
    }}
  | Source = {{own}}
  | Date = $date
  | Author = $user.displayName ([[User:$user.login]])
- | Permission = {{cc-by-sa-4.0}}
+ | Permission = {{cc-by-sa-4.0|$user.displayName}}
 }}
 #if ($GPS.GPSVersionID == "2.200")
 #parse ("includes/gps.vm")
 #end
-{{Wikimedia France - Wikimania 2014}}
-{{Consent|public}}
-{{Personality rights}}
 #parse ("includes/minicul.vm")
-#parse ("includes/wmfr.vm")
+
 #foreach ($keyword in $keywords)
 #if ($keyword.startsWith("Category:"))
 [[$keyword]]
 #end
+#if ($keyword.startsWith("{{") && $keyword.endsWith("}}"))
+$keyword
 #end
+#end
+#parse ("includes/wmfr.vm")
 #parse ("includes/user.vm")
-[[Category:Wikimania 2014 photos by $user.login]]
+[[Category:Files by $user.login]]
+[[Category:ComeOn!]]

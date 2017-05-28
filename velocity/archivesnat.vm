@@ -1,50 +1,56 @@
 == {{int:filedesc}} ==
 
 {{Artwork
- | Artist =
- | Title = {{Title|$external.titre|lang=fr}}
- | Description = {{mld
-    | fr = $external.analyse
-   }}
-#if ( $external.date)
- | Date = $external.date
+#if ( $external.auteur != "" )
+| Author = $external.auteur
 #else
- | Date = {{Other date|unknown}}
+| Author = {{unknown|author}}
 #end
-#if ( $external.taille )
- | Dimensions = $external.taille
+| Title = {{Title|$external.titre|lang=fr}}
+| Description = {{mld
+| fr = $external.analyse
+}}
+#if ( $external.date != "" )
+| Date = $external.date
+#else
+| Date = {{Other date|unknown}}
+#end
+#if ( $external.taille != "" )
+| Dimensions = $external.taille
 # elseif ( $external.hauteur && $external.largeur )
- | Dimensions = {{Size|unit=cm|height=$external.hauteur|width=$external.largeur}}
+| Dimensions = {{Size|unit=cm|height=$external.hauteur|width=$external.largeur}}
 #end
- | Medium = {{Technique|paper}}
- | Institution = {{Institution:Archives nationales (France)}}
- | Accession number = $external.cote #if ( $external.cote_origine ) ({{Original accession number|$external.cote_origine}}) #end
- | References =
-#if ( $external.source ) * [$external.source Document sur le site des archives] #end
-#if ( $external.archim) * {{Base Archim|$external.archim}} #end
- | Source = {{Archives Nationales cooperation project}}
- | Permission = {{PD-old-100-1923}}
+#if ( $external.technique != "" )
+| Medium = {{Technique|$external.technique}}
+#end
+| Institution = {{Institution:Archives nationales (France)}}
+#if ( $external.cote_origine == "" )
+| Accession number = $external.cote
+#else
+| Accession number = $external.cote ({{Original accession number|$external.cote_origine}})
+#end
+#if ( $external.source != "" || $external.archim != "" )
+| References =
+ #if ( $external.source != "" )
+ * [$external.source Document sur le site des archives]
+ #end
+ #if ( $external.archim != "" )
+ * {{Base Archim|$external.archim}}
+ #end
+#end
+| Source = {{Archives Nationales cooperation project}}
+| Permission = {{PD-old-100-1923}}
 }}
 
-#if ( $external.annee )
+#if ( $external.annee != "" )
 [[Category:$external.annee in France]]
 #end
 #if ( $external.num_versement )
 [[Category:Media contributed by the Archives Nationales (France)/$external.num_versement]]
+#else
+[[Category:Media contributed by the Archives Nationales (France)]]
 #end
-
-#*
-Colonnes attendues dans le fichier CSV :
-titre : Titre du document. Obligatoire.
-analyse : Description du document. Obligatoire.
-date : Date du document, au format AAAA, AAAA-MM ou AAAA-MM-JJ. Pour les cas complexes, utiliser directement {{other date}}. Facultatif.
-taile : Dimensions du document. Facultatif. Ne pas indiquer si largeur et hauteur sont précisés.
-largeur : Largeur du document en cm. Facultatif. Utilisé seulement si hauteur est indiqué aussi.
-hauteur : Hauteur du document en cm. Facultatif. Utilisé seulement si largeur est indiqué aussi.
-cote : Côte courante du document. Obligatoire.
-cote_origine : Côte originale du document. Facultatif.
-source : URL du document sur le site des Archives. Facultatif.
-archim : Code Archim du document. Facultatif.
-annee : Année du document. Facultatif.
-num_versement : Numéro du versement. Facultatif.
-*#
+#if ( $external.categorie != "" )
+[[$external.categorie]]
+#end
+[[Category:Collections of Archives nationales (France)]]
